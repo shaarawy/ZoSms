@@ -118,7 +118,7 @@ msgRef.orderByChild("date").startAt(1546170624122).endAt(1546170746005).limitToF
 
 
 
-server.listen(process.env.PORT || port, hostname, function() {
+server.listen(process.env.PORT || port, '0.0.0.0', function() {
   console.log('Server running at http://'+ hostname + ':' + port + '/');
   
 
