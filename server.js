@@ -17,7 +17,7 @@ firebase.initializeApp({
 });
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = 8080;
 const server = http.createServer(function(req, res) {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
@@ -118,9 +118,10 @@ msgRef.orderByChild("date").startAt(1546170624122).endAt(1546170746005).limitToF
 
 
 
-server.listen(port, hostname, function() {
+server.listen(process.env.PORT || port, hostname, function() {
   console.log('Server running at http://'+ hostname + ':' + port + '/');
   
+
 
 
 
